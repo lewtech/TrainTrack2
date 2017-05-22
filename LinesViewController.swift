@@ -13,6 +13,7 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var linesTableView: UITableView!
     let cellID = "cell"
     let lines = ["brown","red","blue"]
+    var selectedLine : String!
 
     class Train  {
         var color: String = ""
@@ -97,7 +98,9 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "lineView", sender: nil)
+        let selectedLine = trains[indexPath.row].code
+
+        performSegue(withIdentifier: "lineView", sender: selectedLine)
     }
 
 
@@ -109,6 +112,13 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let selectedLine = segue.destination as! LineViewController
+
+        if segue.identifier == "lineView" {
+            selectedLine.selectedLine = sender as! String!
+        }
+
+
     }
 
 

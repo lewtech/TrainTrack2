@@ -23,7 +23,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
     }
 
 
-
+    var selectedLine: String!
 
     var feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&mapid=41320&outputType=JSON&rt="
 
@@ -39,7 +39,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         var line = "red"
-        feed += line
+        feed += selectedLine
 
         parseData()
         // Do any additional setup after loading the view.
