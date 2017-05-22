@@ -40,6 +40,10 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func segueToAllLines(_ sender: Any) {
+        performSegue(withIdentifier:
+            "allLines", sender: nil)
+    }
     func parseData() {
         guard let feedURL = URL(string: feed) else {
             return

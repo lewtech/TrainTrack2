@@ -117,14 +117,14 @@
                     <tabBarItem key="tabBarItem" title="Line" id="klV-S2-J3A"/>
                     <connections>
                         <outlet property="lineTableView" destination="Qvq-Id-WnU" id="94Q-9W-74X"/>
-                        <segue destination="feq-lx-JR0" kind="showDetail" identifier="stopView" id="jzP-f2-f4T"/>
+                        <segue destination="NzV-cJ-M0B" kind="showDetail" identifier="stopView" id="jzP-f2-f4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqU-Qx-8Yc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3504.8000000000002" y="8.5457271364317844"/>
         </scene>
-        <!--Stops-->
+        <!--Stop View Controller-->
         <scene sceneID="U3r-Qs-l7k">
             <objects>
                 <viewController id="feq-lx-JR0" customClass="StopViewController" customModule="TrainTrack" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,14 +174,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stops" id="VKN-Lr-5b9"/>
+                    <navigationItem key="navigationItem" id="vbe-mW-diD">
+                        <barButtonItem key="leftBarButtonItem" title="All Lines" id="y9C-k0-kYn">
+                            <connections>
+                                <action selector="segueToAllLines:" destination="feq-lx-JR0" id="haE-jw-JBI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="stopViewController" destination="PmX-3J-6sw" id="04i-6f-nfc"/>
+                        <segue destination="uPy-cl-BSM" kind="show" identifier="allLines" id="6sJ-jQ-Acr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTV-Mc-EYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4738" y="9"/>
+            <point key="canvasLocation" x="4796" y="9"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yQl-Sj-sSF">
@@ -338,8 +345,28 @@
             </objects>
             <point key="canvasLocation" x="1853.5999999999999" y="8.5457271364317844"/>
         </scene>
+        <!--Stops-->
+        <scene sceneID="BpM-3h-0HR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NzV-cJ-M0B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stops" id="VKN-Lr-5b9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v90-Zi-Oqy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="feq-lx-JR0" kind="relationship" relationship="rootViewController" id="lIy-r8-It8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PZ-7b-Kow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4154" y="9"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="6sJ-jQ-Acr"/>
         <segue reference="HvR-24-LkR"/>
     </inferredMetricsTieBreakers>
 </document>
