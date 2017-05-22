@@ -104,7 +104,7 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let destinationRow = records[indexPath.row]
         cell.textLabel?.text = destinationRow.destination
         cell.detailTextLabel?.text = destinationRow.time
-        cell.textLabel?.text = "A"
+        //cell.textLabel?.text = "A"
 
         return cell
     }

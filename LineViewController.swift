@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class LineViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
-    let cellID = "cell"
+    let cellID = "lineCell"
 
 
     @IBOutlet weak var lineTableView: UITableView!
@@ -22,16 +22,25 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
         lazy var time: String = ""
     }
 
-/*    let feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&mapid=41320&outputType=JSON" 
-     
-     */
 
-    let feed = "http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&rt=red"
+
+
+    var feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&mapid=41320&outputType=JSON&rt="
+
+
+
+     
+
+
+    //let feed2 = "http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&rt=red"
 
     var records = [Destinations]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var line = "red"
+        feed += line
+
         parseData()
         // Do any additional setup after loading the view.
     }
@@ -105,7 +114,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
         let destinationRow = records[indexPath.row]
         cell.textLabel?.text = destinationRow.destination
         cell.detailTextLabel?.text = destinationRow.time
-        cell.textLabel?.text = "A"
+        //cell.textLabel?.text = "A"
 
         return cell
     }
