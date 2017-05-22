@@ -96,9 +96,13 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "lineView", sender: nil)
+    }
 
 
-    /*
+
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -106,6 +110,6 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

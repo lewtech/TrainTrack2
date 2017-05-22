@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--All Lines-->
+        <!--Lines View Controller-->
         <scene sceneID="crZ-EN-Fxe">
             <objects>
                 <viewController id="uPy-cl-BSM" customClass="LinesViewController" customModule="TrainTrack" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="egh-jn-X0h">
-                                <rect key="frame" x="16" y="100" width="343" height="547"/>
+                                <rect key="frame" x="16" y="144" width="343" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="bFl-8R-j85" style="IBUITableViewCellStyleDefault" id="hF5-BG-taA">
@@ -54,20 +54,20 @@
                             <constraint firstItem="egh-jn-X0h" firstAttribute="trailing" secondItem="Ynw-8a-Mia" secondAttribute="trailingMargin" id="xfs-K8-X64"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All Lines" id="RzS-3f-agv"/>
                     <navigationItem key="navigationItem" id="iRE-8p-fWM"/>
                     <connections>
                         <outlet property="linesTableView" destination="egh-jn-X0h" id="JtM-DM-06a"/>
+                        <segue destination="Hw7-K5-xMJ" kind="show" identifier="lineView" id="CEY-Z1-DCt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ab-r2-DoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="9"/>
+            <point key="canvasLocation" x="2792.8000000000002" y="8.5457271364317844"/>
         </scene>
         <!--Line-->
         <scene sceneID="97T-H8-XZK">
             <objects>
-                <viewController id="Hw7-K5-xMJ" customClass="LineViewController" customModule="TrainTrack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lineView" id="Hw7-K5-xMJ" customClass="LineViewController" customModule="TrainTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R4c-dO-qHt"/>
                         <viewControllerLayoutGuide type="bottom" id="Z34-U1-Ipa"/>
@@ -117,11 +117,12 @@
                     <tabBarItem key="tabBarItem" title="Line" id="klV-S2-J3A"/>
                     <connections>
                         <outlet property="lineTableView" destination="Qvq-Id-WnU" id="94Q-9W-74X"/>
+                        <segue destination="feq-lx-JR0" kind="showDetail" identifier="stopView" id="jzP-f2-f4T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqU-Qx-8Yc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2567" y="9"/>
+            <point key="canvasLocation" x="3504.8000000000002" y="8.5457271364317844"/>
         </scene>
         <!--Stops-->
         <scene sceneID="U3r-Qs-l7k">
@@ -180,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTV-Mc-EYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-620"/>
+            <point key="canvasLocation" x="4738" y="9"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yQl-Sj-sSF">
@@ -193,9 +194,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uPy-cl-BSM" kind="relationship" relationship="viewControllers" id="opg-8M-BnQ"/>
+                        <segue destination="QDt-9P-PLb" kind="relationship" relationship="viewControllers" id="opg-8M-BnQ"/>
                         <segue destination="Hw7-K5-xMJ" kind="relationship" relationship="viewControllers" id="HvR-24-LkR"/>
-                        <segue destination="feq-lx-JR0" kind="relationship" relationship="viewControllers" id="5QV-sv-FgA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ip-kU-Zn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,7 +262,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DxK-IR-1w7">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -317,7 +317,29 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWq-qy-EXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="662"/>
+            <point key="canvasLocation" x="1566" y="735"/>
+        </scene>
+        <!--All Lines-->
+        <scene sceneID="Y2o-Ge-0yA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QDt-9P-PLb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="All Lines" id="RzS-3f-agv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KbR-Vg-ix2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uPy-cl-BSM" kind="relationship" relationship="rootViewController" id="Hyy-Fa-U6G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuC-M2-V5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.5999999999999" y="8.5457271364317844"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HvR-24-LkR"/>
+    </inferredMetricsTieBreakers>
 </document>

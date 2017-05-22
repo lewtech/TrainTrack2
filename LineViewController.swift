@@ -118,6 +118,10 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "stopView", sender: nil)
+    }
     /*
      // MARK: - Navigation
 
