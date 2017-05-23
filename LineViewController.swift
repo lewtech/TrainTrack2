@@ -64,7 +64,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
 
                         if let ctattimetable = json["ctatt"] as? [String:Any] {
                             if let estArrivalTime = ctattimetable["route"] as? [[String:Any]] {
-                                if let train = ctattimetable["train"] as? [[String:Any]] {
+                                if (ctattimetable["train"] as? [[String:Any]]) != nil {
                                 for item in estArrivalTime{
                                     //if let stationName = item["staNm"] as? String {
                                     //print(stationName)

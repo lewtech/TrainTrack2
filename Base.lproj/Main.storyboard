@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ab-r2-DoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="358"/>
+            <point key="canvasLocation" x="2647" y="423"/>
         </scene>
         <!--Line-->
         <scene sceneID="97T-H8-XZK">
@@ -214,10 +214,13 @@
                             <outlet property="delegate" destination="9u7-Nj-uU4" id="jiy-gc-n8S"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="NzV-cJ-M0B" kind="show" identifier="stopView" id="5aB-8d-VLm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7f-PU-TOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="-351"/>
+            <point key="canvasLocation" x="3031" y="-367"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yQl-Sj-sSF">
@@ -396,6 +399,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Hyy-Fa-U6G"/>
-        <segue reference="CEY-Z1-DCt"/>
+        <segue reference="HvR-24-LkR"/>
+        <segue reference="5aB-8d-VLm"/>
     </inferredMetricsTieBreakers>
 </document>

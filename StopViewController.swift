@@ -44,6 +44,8 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         performSegue(withIdentifier:
             "allLines", sender: nil)
     }
+
+    //MARK: JSON
     func parseData() {
         guard let feedURL = URL(string: feed) else {
             return
@@ -64,9 +66,7 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         if let ctattimetable = json["ctatt"] as? [String:Any] {
                             if let estArrivalTime = ctattimetable["eta"] as? [[String:Any]] {
                                 for item in estArrivalTime{
-                                    //if let stationName = item["staNm"] as? String {
-                                    //print(stationName)
-                                    //}
+
 
                                     if let headingTowards = item["destNm"] as? String,
                                         let arrivalTime = item["arrT"] as? String {
@@ -112,14 +112,17 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         return cell
     }
-    /*
+
+ /*
+
      // MARK: - Navigation
 
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        performSegue(withIdentifier: "stopView", sender: nil)
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
+*/
     
 }

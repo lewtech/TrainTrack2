@@ -78,6 +78,9 @@ class LineStopsTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "stopView", sender: nil)
+    }
 
     /*
      // Override to support conditional editing of the table view.
@@ -114,7 +117,7 @@ class LineStopsTableViewController: UITableViewController {
      }
      */
 
-    /*
+    
      // MARK: - Navigation
 
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -122,6 +125,6 @@ class LineStopsTableViewController: UITableViewController {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
+
     
 }
