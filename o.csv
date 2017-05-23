@@ -1,24 +1,16 @@
-30022,35th/Archer (Loop-bound),"(41.829353, -87.680622)"
-30023,35th/Archer (Midway-bound),"(41.829353, -87.680622)"
-30132,Adams/Wabash (Inner Loop),"(41.879507, -87.626037)"
-30205,Ashland (Loop-bound),"(41.839234, -87.665317)"
-30206,Ashland (Midway-bound),"(41.839234, -87.665317)"
-30074,Clark/Lake (Inner Loop),"(41.885737, -87.630886)"
-30166,H.W. Library (Inner Loop),"(41.876862, -87.628196)"
-30215,Halsted (Loop-bound),"(41.84678, -87.648088)"
-30216,Halsted (Midway-bound),"(41.84678, -87.648088)"
-30219,Kedzie (Loop-bound),"(41.804236, -87.704406)"
-30220,Kedzie (Midway-bound),"(41.804236, -87.704406)"
-30031,LaSalle/Van Buren (Inner Loop),"(41.8768, -87.631739)"
-30182,Midway (Arrival),"(41.78661, -87.737875)"
-30181,Midway (Loop-bound),"(41.78661, -87.737875)"
-30185,Pulaski (Loop-bound),"(41.799756, -87.724493)"
-30186,Pulaski (Midway-bound),"(41.799756, -87.724493)"
-30007,Quincy/Wells (Inner Loop),"(41.878723, -87.63374)"
-30039,Randolph/Wabash (Inner Loop),"(41.884431, -87.626149)"
-30080,Roosevelt (Loop-Harlem-bound),"(41.867405, -87.62659)"
-30081,Roosevelt (Midway-63rd-bound),"(41.867405, -87.62659)"
-30050,State/Lake (Inner Loop),"(41.88574, -87.627835)"
-30141,Washington/Wells (Inner Loop),"(41.882695, -87.63378)"
-30060,Western (Loop-bound),"(41.804546, -87.684019)"
-30061,Western (Midway-bound),"(41.804546, -87.684019)"
+35th/Archer	40120
+Adams/Wabash	40680
+Ashland	41060
+Clark/Lake	40380
+Halsted	41130
+Harold Washington Library	40850
+Kedzie	41150
+LaSalle/Van Buren	40160
+Midway	40930
+Pulaski	40960
+Quincy/Wells	40040
+Randolph/Wabash	40200
+Roosevelt	41400
+State/Lake	40260
+Washington/Wells	40730
+Western	40310

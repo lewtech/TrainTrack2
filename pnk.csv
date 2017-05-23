@@ -1,36 +1,21 @@
-30162	18th (54th/Cermak-bound)
-30161	18th (Loop-bound)
-30113	54th/Cermak (Loop-bound)
-30114	54th/Cermak (Terminal arrival)
-30132	Adams/Wabash (Inner Loop)
-30032	Ashland (Harlem-54th/Cermak-bound)
-30033	Ashland (Loop-63rd-bound)
-30087	California (54th/Cermak-bound)
-30086	California (Loop-bound)
-30152	Central Park (54th/Cermak-bound)
-30151	Central Park (Loop-bound)
-30083	Cicero (54th/Cermak-bound)
-30082	Cicero (Loop-bound)
-30074	Clark/Lake (Inner Loop)
-30222	Clinton (Harlem-54th/Cermak-bound)
-30221	Clinton (Loop-63rd-bound)
-30041	Damen (54th/Cermak-bound)
-30040	Damen (Loop-bound)
-30166	H.W. Library (Inner Loop)
-30202	Kedzie (54th/Cermak-bound)
-30201	Kedzie (Loop-bound)
-30118	Kostner (54th/Cermak-bound)
-30117	Kostner (Loop-bound)
-30031	LaSalle/Van Buren (Inner Loop)
-30296	Morgan (Harlem-54th/Cermak-bound)
-30295	Morgan (Loop-63rd-bound)
-30200	Polk (54th/Cermak-bound)
-30199	Polk (Loop-bound)
-30029	Pulaski (54th/Cermak-bound)
-30028	Pulaski (Loop-bound)
-30007	Quincy/Wells (Inner Loop)
-30039	Randolph/Wabash (Inner Loop)
-30050	State/Lake (Inner Loop)
-30141	Washington/Wells (Inner Loop)
-30144	Western (54th/Cermak-bound)
-30143	Western (Loop-bound)
+18th	40830
+54th/Cermak	40580
+Adams/Wabash	40680
+Ashland	40170
+California	40440
+Central Park	40780
+Cicero	40420
+Clark/Lake	40380
+Clinton	41160
+Damen	40210
+Harold Washington 	40850
+Kedzie	41040
+Kostner	40600
+LaSalle/Van Buren	40160
+Morgan	41510
+Polk	41030
+Pulaski	40150
+Randolph/Wabash	40200
+State/Lake	40260
+Washington/Wells	40730
+Western	40740

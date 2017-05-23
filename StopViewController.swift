@@ -18,19 +18,24 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var stopViewController: UITableView!
 
+    var selectedStop :String = ""
+    var feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&outputType=JSON&mapid="
 
 
     class Destinations {
         lazy var destination: String = ""
         lazy var time: String = ""
+
     }
 
-    let feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&mapid=41320&outputType=JSON"
+
 
     var records = [Destinations]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        feed += selectedStop
+
         parseData()
         // Do any additional setup after loading the view.
     }
@@ -68,7 +73,7 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
                                 for item in estArrivalTime{
 
 
-                                    if let headingTowards = item["destNm"] as? String,
+                                    if let headingTowards = item["staNm"] as? String,
                                         let arrivalTime = item["arrT"] as? String {
                                         let record = Destinations()
                                         record.destination = headingTowards

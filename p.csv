@@ -1,18 +1,9 @@
-30242	Central (Howard-Loop-bound)
-30241	Central (Linden-bound)
-30011	Davis (Howard-Loop-bound)
-30010	Davis (Linden-bound)
-30134	Dempster (Howard-Loop-bound)
-30133	Dempster (Linden-bound)
-30102	Foster (Howard-Loop-bound)
-30101	Foster (Linden-bound)
-30175	Howard (Linden, Skokie-bound)
-30176	Howard (Terminal arrival)
-30204	Linden (Howard-Loop-bound)
-30203	Linden (Linden-bound)
-30053	Main (Howard-Loop-bound)
-30052	Main (Linden-bound)
-30079	Noyes (Howard-Loop-bound)
-30078	Noyes (Linden-bound)
-30164	South Blvd (Howard-Loop-bound)
-30163	South Blvd (Linden-bound)
+Central	41250
+Davis	40050
+Dempster	40690
+Foster	40520
+Howard	40900
+Linden	41050
+Main	40270
+Noyes	40400
+South Boulevard	40840

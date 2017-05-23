@@ -29,9 +29,9 @@ class LineStopsTableViewController: UITableViewController {
 
                 for i in 1..<readings.count-1 {
                     let clientData = readings[i].components(separatedBy:"\t")
+                    dictClients["stop"] = "\(clientData[0])"
+                    dictClients["mapCode"] = "\(clientData[1])"
 
-                    dictClients["mapCode"] = "\(clientData[0])"
-                    dictClients["stop"] = "\(clientData[1])"
 
 
                     arrayClients.append(dictClients)
@@ -79,7 +79,10 @@ class LineStopsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "stopView", sender: nil)
+
+        let selectedStop = arrayClients[indexPath.row]["mapCode"]
+
+        performSegue(withIdentifier: "lineStop", sender: selectedStop)
     }
 
     /*
@@ -124,7 +127,10 @@ class LineStopsTableViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
-     }
+        let stopViewController = segue.destination as! StopViewController
 
-    
+        if segue.identifier == "lineStop" {
+            stopViewController.selectedStop = sender as! String!
+        }
+    }
 }

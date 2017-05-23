@@ -1,66 +1,31 @@
-30240	Addison (Forest Pk-bound)
-30239	Addison (O'Hare-bound)
-30002	Austin (Forest Pk-bound)
-30001	Austin (O'Hare-bound)
-30013	Belmont (O'Hare Branch) (Forest Pk-bound)
-30012	Belmont (O'Hare Branch) (O'Hare-bound)
-30112	California (Forest Pk-bound)
-30111	California (O'Hare-bound)
-30272	Chicago (Forest Pk-bound)
-30271	Chicago (O'Hare-bound)
-30188	Cicero (Forest Pk-bound)
-30187	Cicero (O'Hare-bound)
-30374	Clark/Lake (Forest Pk-bound)
-30375	Clark/Lake (O'Hare-bound)
-30085	Clinton (Forest Pk-bound)
-30084	Clinton (O'Hare-bound)
-30045	Cumberland (Forest Pk-bound)
-30044	Cumberland (O'Hare-bound)
-30116	Damen/Milwaukee (Forest Pk-bound)
-30115	Damen/Milwaukee (O'Hare-bound)
-30063	Division (Forest Pk-bound)
-30062	Division (O'Hare-bound)
-30076	Forest Park (O'Hare-bound)
-30077	Forest Park (Terminal Arrival)
-30096	Grand/Milwaukee (Forest Pk-bound)
-30095	Grand/Milwaukee (O'Hare-bound)
-30189	Harlem (Forest Pk Branch) (O'Hare-bound)
-30190	Harlem (Forest Pk Branch) (Terminal arrival)
-30146	Harlem (O'Hare Branch) (Forest Pk-bound)
-30145	Harlem (O'Hare Branch) (O'Hare-bound)
-30158	Illinois Medical District (Forest Pk-bound)
-30157	Illinois Medical District (O'Hare-bound)
-30108	Irving Park (O'Hare Branch) (Forest Pk-bound)
-30107	Irving Park (O'Hare Branch) (O'Hare-bound)
-30015	Jackson/Dearborn (Forest Pk-bound)
-30014	Jackson/Dearborn (O'Hare-bound)
-30248	Jefferson Park (Forest Pk-bound)
-30247	Jefferson Park (O'Hare-bound)
-30049	Kedzie-Homan (Forest Pk-bound)
-30048	Kedzie-Homan (O'Hare-bound)
-30262	LaSalle (Forest Pk-bound)
-30261	LaSalle (O'Hare-bound)
-30198	Logan Square (Forest Pk-bound)
-30197	Logan Square (O'Hare-bound)
-30154	Monroe (Forest Pk-bound)
-30153	Monroe (O'Hare-bound)
-30260	Montrose (Forest Pk-bound)
-30259	Montrose (O'Hare-bound)
-30172	O'Hare (Forest Pk-bound)
-30171	O'Hare (Terminal Arrival)
-30035	Oak Park (Forest Pk-bound)
-30034	Oak Park (O'Hare-bound)
-30180	Pulaski (Forest Pk-bound)
-30179	Pulaski (O'Hare-bound)
-30093	Racine (Forest Pk-bound)
-30092	Racine (O'Hare-bound)
-30160	Rosemont (Forest Pk-bound)
-30159	Rosemont (O'Hare-bound)
-30069	UIC-Halsted (Forest Pk-bound)
-30068	UIC-Halsted (O'Hare-bound)
-30073	Washington (Forest Pk-bound)
-30072	Washington (O'Hare-bound)
-30043	Western (Forest Pk Branch) (Forest Pk-bound)
-30042	Western (Forest Pk Branch) (O'Hare-bound)
-30130	Western (O'Hare Branch) (Forest Pk-bound)
-30129	Western (O'Hare Branch) (O'Hare-bound)
+Addison	41240
+Austin	40010
+Belmont	40060
+California	40570
+Chicago	41410
+Cicero	40970
+Clark/Lake	40380
+Clinton	40430
+Cumberland	40230
+Division	40320
+Grand	40490
+Grand	40490
+Harlem	40980
+Harlem	40750
+Illinois Medical District	40810
+Irving Park	40550
+Jackson	40070
+Jefferson Park	41280
+Kedzie-Homan	40250
+LaSalle	41340
+Logan Square	41020
+Monroe	40790
+Montrose	41330
+O'Hare	40890
+Oak Park	40180
+Pulaski	40920
+Racine	40470
+Rosemont	40820
+UIC-Halsted	40350
+Western	40220
+Western	40670

@@ -1,60 +1,32 @@
-30214	35-Bronzeville-IIT (63rd-bound)
-30213	35-Bronzeville-IIT (Harlem-bound)
-30246	43rd (63rd-bound)
-30245	43rd (Harlem-bound)
-30210	47th (63rd-bound)
-30209	47th (Harlem-bound)
-30025	51st (63rd-bound)
-30024	51st (Harlem-bound)
-30132	Adams/Wabash (Inner Loop)
-30131	Adams/Wabash (Outer Loop)
-30032	Ashland (Harlem-54th/Cermak-bound)
-30033	Ashland (Loop-63rd-bound)
-30056	Ashland/63rd (Harlem-bound)
-30057	Ashland/63rd (Terminal arrival)
-30243	Austin (63rd-bound)
-30244	Austin (Harlem-bound)
-30265	California (63rd-bound)
-30266	California (Harlem-bound)
-30054	Central (63rd-bound)
-30055	Central (Harlem-bound)
-30382	Cermak-McCormick Place (63rd-bound)
-30381	Cermak-McCormick Place (Harlem-bound)
-30094	Cicero (63rd-bound)
-30009	Cicero (Harlem-bound)
-30074	Clark/Lake (Inner Loop)
-30075	Clark/Lake (Outer Loop)
-30222	Clinton (Harlem-54th/Cermak-bound)
-30221	Clinton (Loop-63rd-bound)
-30291	Conservatory (63rd-bound)
-30292	Conservatory (Harlem-bound)
-30140	Cottage Grove (Harlem-bound)
-30139	Cottage Grove (Terminal arrival)
-30100	Garfield (63rd-bound)
-30099	Garfield (Harlem-bound)
-30184	Halsted/63rd (Ashland-bound)
-30183	Halsted/63rd (Harlem-bound)
-30003	Harlem (63rd-bound)
-30004	Harlem (Terminal arrival)
-30059	Indiana (63rd-bound)
-30058	Indiana (Harlem-bound)
-30207	Kedzie (63rd-bound)
-30208	Kedzie (Harlem-bound)
-30217	King Drive (Cottage Grove-bound)
-30218	King Drive (Harlem-bound)
-30135	Laramie (63rd-bound)
-30136	Laramie (Harlem-bound)
-30296	Morgan (Harlem-54th/Cermak-bound)
-30295	Morgan (Loop-63rd-bound)
-30263	Oak Park (63rd-bound)
-30264	Oak Park (Harlem-bound)
-30005	Pulaski (63rd-bound)
-30006	Pulaski (Harlem-bound)
-30039	Randolph/Wabash (Inner Loop)
-30038	Randolph/Wabash (Outer Loop)
-30119	Ridgeland (63rd-bound)
-30120	Ridgeland (Harlem-bound)
-30080	Roosevelt (Loop-Harlem-bound)
-30081	Roosevelt (Midway-63rd-bound)
-30050	State/Lake (Inner Loop)
-30051	State/Lake (Outer Loop)
+35th-Bronzeville-IIT	41120
+43rd	41270
+47th	41080
+51st	40130
+Adams/Wabash	40680
+Ashland	40170
+Ashland/63rd	40290
+Austin	41260
+California	41360
+Central	40280
+Cermak-McCormick Place	41690
+Cicero	40480
+Clark/Lake	40380
+Clinton	41160
+Conservatory	41670
+Cottage Grove	40720
+Garfield	40510
+Halsted	40940
+Harlem/Lake	40020
+Indiana	40300
+Indiana	40300
+Kedzie	41070
+King Drive	41140
+Laramie	40700
+Morgan	41510
+Oak Park	41350
+Pulaski	40030
+Randolph/Wabash	40200
+Ridgeland	40610
+Ridgeland	40610
+Roosevelt	41400
+State/Lake	40260
