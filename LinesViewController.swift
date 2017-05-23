@@ -100,7 +100,7 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedLine = trains[indexPath.row].code
 
-        performSegue(withIdentifier: "lineView", sender: selectedLine)
+        performSegue(withIdentifier: "lineStops", sender: selectedLine)
     }
 
 
@@ -112,9 +112,9 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let selectedLine = segue.destination as! LineViewController
+        let selectedLine = segue.destination as! LineStopsTableViewController
 
-        if segue.identifier == "lineView" {
+        if segue.identifier == "lineStops" {
             selectedLine.selectedLine = sender as! String!
         }
 

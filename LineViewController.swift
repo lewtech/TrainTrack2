@@ -23,25 +23,20 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
     }
 
 
-    var selectedLine: String!
+    var selectedLine: String! //data populated from segue
 
-    var feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&mapid=41320&outputType=JSON&rt="
+    var feed = "http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&outputType=JSON&rt="
 
-
-
-     
-
-
-    //let feed2 = "http://lapi.transitchicago.com/api/1.0/ttpositions.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&rt=red"
 
     var records = [Destinations]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var line = "red"
+
         feed += selectedLine
 
-        parseData()
+        loadData()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -50,7 +45,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
 
-    func parseData() {
+    func loadData() {
         guard let feedURL = URL(string: feed) else {
             return
         }
@@ -68,13 +63,14 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
                         print(json)
 
                         if let ctattimetable = json["ctatt"] as? [String:Any] {
-                            if let estArrivalTime = ctattimetable["eta"] as? [[String:Any]] {
+                            if let estArrivalTime = ctattimetable["route"] as? [[String:Any]] {
+                                if let train = ctattimetable["train"] as? [[String:Any]] {
                                 for item in estArrivalTime{
                                     //if let stationName = item["staNm"] as? String {
                                     //print(stationName)
                                     //}
 
-                                    if let headingTowards = item["destNm"] as? String,
+                                    if let headingTowards = item["nextStaNm"] as? String,
                                         let arrivalTime = item["arrT"] as? String {
                                         let record = Destinations()
                                         record.destination = headingTowards
@@ -82,9 +78,9 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
                                         self.records.append(record)
                                     }
                                     self.lineTableView.reloadData()
+                                    }
 
-
-                                }
+                                } //for item in est arrival time
 
                             }
                         }
@@ -113,7 +109,7 @@ class LineViewController: UIViewController , UITableViewDataSource, UITableViewD
         let cell = lineTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         let destinationRow = records[indexPath.row]
         cell.textLabel?.text = destinationRow.destination
-        cell.detailTextLabel?.text = destinationRow.time
+        //cell.detailTextLabel?.text = destinationRow.time
         //cell.textLabel?.text = "A"
 
         return cell
