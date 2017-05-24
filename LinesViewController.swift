@@ -31,9 +31,9 @@ class LinesViewController: UIViewController, UITableViewDataSource, UITableViewD
     let redLine = Train(color: "red", line: "Red Line", code: "red")
     let blueLine = Train(color: "blue", line: "Blue Line", code: "blue")
     let greenLine = Train(color: "green", line: "Green Line", code: "g")
-    let orangeLine = Train(color: "orange", line: "Orange Line", code: "org")
+    let orangeLine = Train(color: "orange", line: "Orange Line", code: "o")
     let purpleLine = Train(color: "purple", line: "Purple Line", code: "p")
-    let pinkLine = Train(color: "pink", line: "Pink Line", code: "pink")
+    let pinkLine = Train(color: "pink", line: "Pink Line", code: "pnk")
     let yellowLine = Train(color: "yellow", line: "Yellow Line", code: "y")
     var trains: [Train] = []
 

@@ -25,6 +25,10 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     class Destinations {
         lazy var destination: String = ""
         lazy var time: String = ""
+        lazy var isApproaching: String = ""
+        lazy var stpDe: String = ""
+        lazy var route: String = ""
+        lazy var stopDestination: String = ""
 
     }
 
@@ -74,10 +78,15 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 
                                     if let headingTowards = item["staNm"] as? String,
-                                        let arrivalTime = item["arrT"] as? String {
+                                        let arrivalTime = item["arrT"] as? String, let isApproaching = item["isApp"] as? String, let stpDestination = item["stpDe"] as? String, let route = item["rt"] as? String{
                                         let record = Destinations()
+                                        let index = arrivalTime.index(arrivalTime.startIndex, offsetBy:11)
+                                        let atime = arrivalTime.substring(from: index)
+                                        record.isApproaching = isApproaching
+                                        record.stpDe = stpDestination
                                         record.destination = headingTowards
-                                        record.time = arrivalTime
+                                        record.time = atime
+                                        record.route = route
                                         self.records.append(record)
                                     }
                                     self.stopViewController.reloadData()
@@ -108,10 +117,16 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        var status = ""
         let cell = stopViewController.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+
         let destinationRow = records[indexPath.row]
+
         cell.textLabel?.text = destinationRow.destination
+        if destinationRow.isApproaching == "1" {
+            status = "Approaching"
+        } else {status = "Scheduled"}
+        cell.textLabel?.text = (destinationRow.route + " " + destinationRow.stpDe)
         cell.detailTextLabel?.text = destinationRow.time
         //cell.textLabel?.text = "A"
 
