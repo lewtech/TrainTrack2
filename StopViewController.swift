@@ -15,10 +15,11 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     let cellID = "stopsCell"
 
-
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var stopViewController: UITableView!
 
     var selectedStop :String = ""
+    var nameOfStop :String = ""
     var feed = "http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=3247f1d04cc9437b92fa8313c6a7e91c&outputType=JSON&mapid="
 
 
@@ -39,7 +40,7 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         feed += selectedStop
-
+        titleLabel.text = nameOfStop
         parseData()
         // Do any additional setup after loading the view.
     }
@@ -108,12 +109,19 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     // MARK: TABLEVIEW
 
+
+
     func numberOfSections(in tableView: UITableView) -> Int {
+
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return records.count
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        titleLabel.text = records[0].destination
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -128,7 +136,7 @@ class StopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {status = "Scheduled"}
         cell.textLabel?.text = (destinationRow.route + " " + destinationRow.stpDe)
         cell.detailTextLabel?.text = destinationRow.time
-        //cell.textLabel?.text = "A"
+
 
         return cell
     }

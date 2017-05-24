@@ -81,6 +81,7 @@ class LineStopsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let selectedStop = arrayClients[indexPath.row]["mapCode"]
+        let nameOfStop = arrayClients[indexPath.row]["stop"]
 
         performSegue(withIdentifier: "lineStop", sender: selectedStop)
     }
@@ -131,6 +132,7 @@ class LineStopsTableViewController: UITableViewController {
 
         if segue.identifier == "lineStop" {
             stopViewController.selectedStop = sender as! String!
+            stopViewController.nameOfStop = sender as! String!
         }
     }
 }
